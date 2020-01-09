@@ -11,10 +11,12 @@ addons:
       - python3        # uncomment this to use python3
 
 before_install:
-
-  - sudo apt-get install python3-pip
-  - sudo pip3 install --upgrade pip
+  # Install miniconda
+  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O $HOME/miniconda.sh
+  - bash $HOME/miniconda.sh -b -u -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
   - sudo pip3 install setuptools
-  - sudo pip3 install tokenize
   - sudo pip3 install numerizer
   - sudo apt-get update
