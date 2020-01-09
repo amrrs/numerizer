@@ -17,6 +17,6 @@ before_install:
   - export PATH="$HOME/miniconda/bin:$PATH"
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
-  - sudo pip3 install setuptools
-  - sudo pip3 install numerizer
-  - sudo apt-get update
+  #- sudo pip install setuptools
+  - sudo pip install numerizer
+  #- sudo apt-get update
